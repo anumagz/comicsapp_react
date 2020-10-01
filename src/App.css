@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+.col{
+  background-color: black;
+  color:white;
+}
+img{
+  width: 200px;
+height: 300px;
+}
+.app img{
+  height:800px;
+  width:1500px;
+}

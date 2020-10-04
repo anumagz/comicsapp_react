@@ -1,18 +1,23 @@
 import React from 'react';
 import logo from './bla.jpg';
 import kny from './images (44).jpeg'
-import './App.css';
-
+//import './App.css';
+import {Row,Col, Container} from "react-bootstrap";
 function App() {
+
   return (<div>
+
+   
+
     <div className="App">
       <header className="App-header">
-        <div className="app">
-          <img src={logo} className="App-logo" alt="logo" />
-        </div>
-
-
+      
+          <div className="app">
+            <img src={logo} className="App-logo" alt="logo" />
+          </div>
+      
       </header>
+
       <h3>Latest Release</h3>
 
       <ul>
@@ -76,13 +81,18 @@ function App() {
       </a>
     </div >
 
+<div className="javascript">
 
+</div>
+    <div className="content">
 
-    <h2>#1 Kimetsu no Yaiba</h2>
-    <div className="row">
-      <div className="col">
-        <img src={kny} />
-        <div className="col">
+      <h2>#1 Kimetsu no Yaiba</h2>
+      <Container>
+    <Row>
+        <Col xs={4}>
+          <img src={kny} />
+        </Col>
+       <Col xs={8}>
           <h5>Status:Completed</h5>
           <h5>Genre:Adventure</h5>
           <h5>Author:Koyoharu Gotouge</h5>
@@ -99,16 +109,20 @@ function App() {
           the
           poison of a flower called Wisteria, or exposed to sunlight. The Demon Slayers, on the other hand, are
           entirely human, however, they employ special breathing techniques, known as breaths, which grant them
-                  superhuman strength and increased resistance.</p>
-        </div>
-        <br />
-      </div>
-    </div>
+                  syuperhuman strength and increased resistance.</p>
+          <br />
+          </Col>
+        </Row>
+        </Container>
+  
+
+
+
 
 
     <h2>#2 Boku no Hero Acadamia</h2>
     <div className="row">
-      <div className="col">
+      <div className="col-auto">
         <img src={require('./images (41).jpeg')} />
         <div className="col">
           <h5>Status:Ongoing</h5>
@@ -124,15 +138,14 @@ function App() {
           purposes, commonly known as Villains. In addition, Heroes who choose to exercise heroism at work level
           are recognized as Pro Heroes. Unless the individual is registered as a Pro Hero, the voluntary use of
                   his or her Quirk in public places is considered a crime, except in exceptional cases</p>
-
+          <br />
         </div>
-        <br />
       </div>
     </div>
 
     <h2>#3 Naruto</h2>
     <div className="row">
-      <div className="col">
+      <div className="col-auto">
         <img src={require('./naruto_1_1.jpg')} />
         <div className="col">
           <h5>Status:Completed</h5>
@@ -147,8 +160,8 @@ function App() {
           forbidding anyone to mention these events, Naruto knows nothing about the Nine-Tails until 12 years
           later, when Mizuki, a renegade ninja, reveals the truth to Naruto. Naruto then defeats Mizuki in
                   combat, earning the respect of his teacher Iruka Umino</p>
+          <br />
         </div>
-        <br />
       </div>
     </div>
 
@@ -156,7 +169,7 @@ function App() {
 
     <h2>#4 Dr.Stone</h2>
     <div className="row">
-      <div className="col">
+      <div className="col-auto">
         <img src={require('./images (38).jpeg')} />
         <div className="col">
           <h5>Status:Ongoing</h5>
@@ -171,15 +184,15 @@ function App() {
           others. He begins by reviving his friend Taiju Ōki, their classNamemate Yuzuriha Ogawa, and a famous
           martial artist named Tsukasa Shishiō, with the goal of rebuilding civilization with a focus on
                   science.</p>
+          <br />
         </div>
-        <br />
       </div>
     </div>
 
 
     <h2>#5 One punch man</h2>
     <div className="row">
-      <div className="col">
+      <div className="col-auto">
         <img src={require('./images (49).jpeg')} />
         <div className="col">
           <h5>Status:Ongoing</h5>
@@ -194,13 +207,13 @@ function App() {
           who killed his family and destroyed his hometown. Saitama and Genos join the Hero Association, but
           due to scoring low on the written entry exam, Saitama is placed at a low-entry rank, and his feats
                   remain unnoticed and unappreciated by the public</p>
+          <br />
         </div>
-        <br />
       </div>
     </div>
     <h2>#6 One piece</h2>
     <div className="row">
-      <div className="col">
+      <div className="col-auto">
         <img src={require('./images (39).jpeg')} />
         <div className="col">
           <h5>Status:Ongoing</h5>
@@ -215,15 +228,15 @@ function App() {
           acquire a ship named the Going Merry and engage in confrontations with notorious pirates of the
           East Blue. As Luffy and his crew set out on their adventures, others join the crew later in the
                   series, as they sail the seas in pursuit of their dreams.</p>
-
+          <br />
         </div>
-        <br />
       </div>
     </div>
     <h2>#7 Tokyo Ghoul</h2>
     <div className="row">
-      <div className="col">
+      <div className="col-auto">
         <img src={require('./images (34).jpeg')} />
+
         <div className="col">
           <h5>Status:Ongoing</h5>
           <h5>Genre:Supernatural</h5>
@@ -235,15 +248,14 @@ function App() {
           transferred into his body, and now, like normal ghouls, he must consume human flesh to
           survive. The ghouls who manage the coffee shop "Anteiku" take him in and teach him to deal
                   with his new life as a half-ghoul</p>
-
+          <br />
         </div>
-        <br />
       </div>
     </div>
 
     <h2>#8 Death Note</h2>
     <div className="row">
-      <div className="col">
+      <div className="col-auto">
         <img src={require('./images (35).jpeg')} />
         <div className="col">
           <h5>Status:Completed</h5>
@@ -256,14 +268,14 @@ function App() {
           Note's abilities and sets out to create a utopian world without crime, killing numerous
           high-profile Japanese criminals, before eventually targeting international criminals and
                   felons around the world. </p>
+          <br />
         </div>
-        <br />
       </div>
     </div>
 
     <h2>#9 Attack on Titan</h2>
     <div className="row">
-      <div className="col">
+      <div className="col-auto">
         <img src={require('./images (36).jpeg')} />
         <div className="col">
           <h5>Status:Ongoing</h5>
@@ -276,13 +288,13 @@ function App() {
           Colossal (Colossus in the search) and Armoured Titans, invading Titans force humanity to
           retreat behind Wall Rose. After a titan devours his mother and his father disappears, a
                   vengeful Eren enlists in the military along with Mikasa and Armin.</p>
+          <br />
         </div>
-        <br />
       </div>
     </div>
     <h2>#10 Monster</h2>
     <div className="row">
-      <div className="col">
+      <div className="col-auto">
         <img src={require('./images (37).jpeg')} />
         <div className="col">
           <h5>Status:Completed</h5>
@@ -297,8 +309,8 @@ function App() {
           social standing. Director Heinemann and the other doctors in Tenma's way are
           mysteriously murdered, and both children disappear from the hospital. The police suspect
                   Tenma, but they have no evidence and can only question him.</p>
+          <br />
         </div>
-        <br />
       </div>
     </div>
 
@@ -306,54 +318,54 @@ function App() {
       <div className="row">
         <div className="col">
           <h2 className="text-light">Jump Collection:</h2>
-         
-            <div id="Album" className="carousel slide" data-ride="carousel">
 
-              <div className="carousel-inner">
+          <div id="Album" className="carousel slide" data-ride="carousel">
 
-                <div className="carousel-item active">
-                  <img src={require('./images (50).jpeg')} />
-                </div>
+            <div className="carousel-inner">
 
-                <div className="carousel-item">
-                  <img src={require('./images (51).jpeg')} />
-                </div>
-
-                <div className="carousel-item">
-                  <img src={require('./images (52).jpeg')} />
-                </div>
-
-                <div className="carousel-item">
-                  <img src={require('./images (43).jpeg')} />
-                </div>
-
+              <div className="carousel-item active">
+                <img src={require('./images (50).jpeg')} />
               </div>
+
+              <div className="carousel-item">
+                <img src={require('./images (51).jpeg')} />
+              </div>
+
+              <div className="carousel-item">
+                <img src={require('./images (52).jpeg')} />
+              </div>
+
+              <div className="carousel-item">
+                <img src={require('./images (43).jpeg')} />
+              </div>
+
             </div>
-            <a className="carousel-control-prev" href="#Album" role="button" data-slide="prev">
-              <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span className="sr-only">Previous</span>
-            </a>
-            <a className="carousel-control-next" href="#Album" role="button" data-slide="next">
-              <span className="carousel-control-next-icon" aria-hidden="true"></span>
-              <span className="sr-only">Next</span>
-            </a>
-
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-              integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-              crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-              integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-              crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-              integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-              crossorigin="anonymous"></script>
-            <script src="hideviewbtn.js"></script>
-
           </div>
+          <a className="carousel-control-prev" href="#Album" role="button" data-slide="prev">
+            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span className="sr-only">Previous</span>
+          </a>
+          <a className="carousel-control-next" href="#Album" role="button" data-slide="next">
+            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+            <span className="sr-only">Next</span>
+          </a>
 
-        </div >
+          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+          <script src="hideviewbtn.js"></script>
+
+        </div>
       </div>
-      </div>
+    </div >
+  </div>
+  </div >
   )
 }
 export default App;

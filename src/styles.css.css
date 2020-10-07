@@ -1,0 +1,11 @@
+/** This is a comment that the browser will ignore,
+* Put your CSS code into this file
+*/
+h1{
+    /** changes the font colour to white */
+    color:white;
+    /** changes the background colour to white */
+    background-color: black;
+    /** gives a margin of 20pixels*/
+    margin:20px;
+}

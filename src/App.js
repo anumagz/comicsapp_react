@@ -1,14 +1,18 @@
 import React from 'react';
-import logo from './bla.jpg';
-import kny from './images (44).jpeg'
 import './App.css';
 import Top10 from './Top10';
+import AppBar from './AppBar';
+import AddComic from "./AddComic";
+import ComicCarousel from "./ComicCarousel"
 import { Row, Col, Container } from "react-bootstrap";
+import Comicsapi from './Comicsapi';
 function App() {
 
   return (<div>
+    <AppBar/>
+    <Top10/>
+    <ComicCarousel/>
     
-<Top10></Top10>
   </div >
   )
 }

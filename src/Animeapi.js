@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from "react";
 
 
-const Comicsapi = () => {
+const Animeapi = () => {
   const [hasError, setErrors] = useState(false);
-  const [comicsapi, setComicsapi] = useState([]);
+  const [animeapi, setAnimeapi] = useState([]);
 
   async function fetchData() {
-    const res = await fetch("https://jikan1.p.rapidapi.com/top/anime/1/upcoming", {
+    const res = await fetch("https://jikan1.p.rapidapi.com/genre/anime/1/1", {
       headers: {
         'x-rapidapi-host':'jikan1.p.rapidapi.com','x-rapidapi-key':'2783fd7940msh6fd0f859ca392bfp1491b0jsn4e02d5dd8d55'
       }
     });
     res
       .json()
-      .then(res => setComicsapi(res.top))
+      .then(res => setAnimeapi(res.anime))
       .catch(err => setErrors(err));
   }
 
@@ -24,16 +24,16 @@ const Comicsapi = () => {
   return (
     <div>
    {
-     comicsapi.map(item=>
+     animeapi.map(item=>
       <div style={{'backgroundColor': 'black','color':'white'}}>
-        <p>  {item.title}:</p>
-        <img src=  {item.image_url}/>
+       <p><h4>{item.title}</h4></p>
+       <img src={item.image_url}/>
+       <p><h5>Episodes:{item.episodes} </h5></p>
+       <p> <h4>Synopsis:</h4>{item.synopsis}</p>
   
-        {/* {item.image_url} */}
-       
       </div>)
    }
    </div>
   );
 };
-export default Comicsapi;
+export default Animeapi;

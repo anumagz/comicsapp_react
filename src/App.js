@@ -6,13 +6,54 @@ import AddComic from "./AddComic";
 import ComicCarousel from "./ComicCarousel"
 import { Row, Col, Container } from "react-bootstrap";
 import Comicsapi from './Comicsapi';
+import Ghibliapi from './Ghibliapi';
+import Animeapi from './Animeapi';
+import Scheduleapi from './Scheduleapi';
+import Studioapi from './Studioapi';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+
+
 function App() {
 
   return (<div>
-    <AppBar/>
-    <Top10/>
-    <ComicCarousel/>
-    
+    <Router>
+      <AppBar />
+      {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+      <Switch>
+        <Route path="/about">
+        
+          <Animeapi />
+
+        </Route>
+
+       < Route path="/animenews">
+       <Comicsapi />
+        </Route>
+
+        <Route path="/upcoming">
+          < Scheduleapi />
+        </Route>
+        <Route path="/MyAnimeList">
+        <Studioapi />
+        </Route>
+        
+        <Route path="/ghibli">
+          <Ghibliapi />
+        </Route>
+
+        <Route path="/">
+          <Top10 />
+          <ComicCarousel />
+        </Route>
+      </Switch>
+    </Router>
   </div >
   )
 }

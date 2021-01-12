@@ -122,16 +122,7 @@ function Top10() {
     console.log(`updated comicArray: ${comicArray}`)
     }
     const [comicArray,setComicarray] = useState([comic1,comic2,comic3,comic4,comic5,comic6,comic7,comic8,comic9,comic10])
-    /*comicArray.push(comic1)
-    comicArray.push(comic2)
-    comicArray.push(comic3)
-    comicArray.push(comic4)
-    comicArray.push(comic5)
-    comicArray.push(comic6)
-    comicArray.push(comic7)
-    comicArray.push(comic8)
-    comicArray.push(comic9)
-    comicArray.push(comic10)*/
+  
 
     /*  const array=[1,2,3]
  array.map((num)=>console.log(num))*/

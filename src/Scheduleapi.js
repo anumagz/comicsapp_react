@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from "react";
 
 
-const Comicsapi = () => {
+const Scheduleapi = () => {
   const [hasError, setErrors] = useState(false);
-  const [comicsapi, setComicsapi] = useState([]);
+  const [scheduleapi, setScheduleapi] = useState([]);
 
   async function fetchData() {
-    const res = await fetch("https://jikan1.p.rapidapi.com/top/anime/1/upcoming", {
+    const res = await fetch("https://jikan1.p.rapidapi.com/schedule/monday", {
       headers: {
         'x-rapidapi-host':'jikan1.p.rapidapi.com','x-rapidapi-key':'2783fd7940msh6fd0f859ca392bfp1491b0jsn4e02d5dd8d55'
       }
     });
     res
       .json()
-      .then(res => setComicsapi(res.top))
+      .then(res => setScheduleapi(res.monday))
       .catch(err => setErrors(err));
   }
 
@@ -24,16 +24,15 @@ const Comicsapi = () => {
   return (
     <div>
    {
-     comicsapi.map(item=>
+     scheduleapi.map(item=>
       <div style={{'backgroundColor': 'black','color':'white'}}>
-        <p>  {item.title}:</p>
-        <img src=  {item.image_url}/>
+      <p>{item.title}</p>  
+      <img src={item.image_url}/>
+      <p> {item.synopsis}</p>
   
-        {/* {item.image_url} */}
-       
       </div>)
    }
    </div>
   );
 };
-export default Comicsapi;
+export default Scheduleapi;  

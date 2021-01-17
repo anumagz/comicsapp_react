@@ -26,9 +26,9 @@ const Scheduleapi = () => {
    {
      scheduleapi.map(item=>
       <div style={{'backgroundColor': 'black','color':'white'}}>
-      <p>{item.title}</p>  
+      <h4>{item.title}</h4>  
       <img src={item.image_url}/>
-      <p> {item.synopsis}</p>
+      <p><h5>Synopsis:</h5> {item.synopsis}</p>
   
       </div>)
    }

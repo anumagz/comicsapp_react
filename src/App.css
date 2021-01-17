@@ -66,3 +66,14 @@ margin-top:20px;
 .carousel{
   margin-left: 100px;
 }
+
+.bg{
+  height:800px;
+  width:1349px;
+  align-items: center;
+  justify-content: center;
+    background-image: url("blak.jpg");
+    color:white;
+  }
+ 
+  

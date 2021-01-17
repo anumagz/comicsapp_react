@@ -23,6 +23,7 @@ const Ghibliapi = () => {
    {
      ghibliapi.map(item=>
       <div  style={{'backgroundColor': 'black','color':'white'}}>
+       
         <h4>{item.title}: </h4>
       <p>Director:  {item.director}</p>
        <p>Producer: {item.producer}</p>

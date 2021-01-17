@@ -10,8 +10,9 @@ function AppBar() {
 
     return (
         <div>
-            <Navbar bg="dark" variant="dark">
-                <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          
+            <Navbar fixed="top" bg="dark" variant="dark">
+                <Navbar.Brand href="#home">Kuro Neko 	(ﾉ◕w◕)ﾉ*:･ﾟ✧</Navbar.Brand>
                 <Nav className="mr-auto">
                     <LinkContainer to="/">
                         <Button>Manga</Button>

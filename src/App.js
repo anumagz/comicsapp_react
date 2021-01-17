@@ -10,43 +10,55 @@ import Ghibliapi from './Ghibliapi';
 import Animeapi from './Animeapi';
 import Scheduleapi from './Scheduleapi';
 import Studioapi from './Studioapi';
+import ComicDetails from './ComicDetails';
+
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom";
-
+import Ghiblicarousel from './Ghiblicarousel';
+import Ghiblicarousel2 from './Ghiblicarousel2';
 
 
 function App() {
 
   return (<div>
     <Router>
+      <h1>.</h1>
       <AppBar />
+  
+                                           
       {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
       <Switch>
-        <Route path="/about">
-        
+        <Route path="/about">       
+                                
           <Animeapi />
-
-        </Route>
-
+        </Route> 
        < Route path="/animenews">
+        
        <Comicsapi />
         </Route>
-
         <Route path="/upcoming">
+        
           < Scheduleapi />
         </Route>
         <Route path="/MyAnimeList">
+      
         <Studioapi />
-        </Route>
-        
+        </Route>    
         <Route path="/ghibli">
+      
+        <Ghiblicarousel2/>
           <Ghibliapi />
+          <Ghiblicarousel/>
         </Route>
+
+        <Route path="/comics/:comicName">
+        <div><ComicDetails/></div>
+      </Route>
 
         <Route path="/">
           <Top10 />

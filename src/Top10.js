@@ -4,6 +4,7 @@ import AddComic from "./AddComic"
 import ComicCarousel from "./ComicCarousel"
 import { LinkContainer } from 'react-router-bootstrap'
 import { Row, Col, Container, Button, Form, FormControl, Modal, InputGroup, Carousel} from "react-bootstrap";
+import API_URL from './constants'
 class comics {
     constructor(titles, genres, statuses, author, imagePath, summary) {
         this.Title = titles
@@ -22,7 +23,7 @@ class comics {
 function Top10() {
 
     async function fetchData() {
-        const res = await fetch("http://localhost:3000/comics");
+        const res = await fetch(`${API_URL}/comics`);
         res
             .json()
             .then(res => setComicarray(res.rows))

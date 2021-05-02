@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import { Row, Col, Container} from "react-bootstrap";
+import API_URL from './constants'
+
 class character {
     constructor(name, gender, age, height, hair_color, eye_color, japanese_va) {
         this.Name = name
@@ -18,7 +20,7 @@ class character {
 function Characters() {
 
     async function fetchData() {
-        const res = await fetch("http://localhost:3000/characters_db");
+        const res = await fetch(`${API_URL}/characters_db`);
         res
             .json()
             .then(res => setComicarray(res.rows))

@@ -11,6 +11,7 @@ import Animeapi from './Animeapi';
 import Scheduleapi from './Scheduleapi';
 import Studioapi from './Studioapi';
 import ComicDetails from './ComicDetails';
+import Characters from "./Characters"
 
 import {
   BrowserRouter as Router,
@@ -28,41 +29,48 @@ function App() {
     <Router>
       <h1>.</h1>
       <AppBar />
-  
-                                           
+
+
       {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
       <Switch>
-        <Route path="/about">       
-                                
+        <Route path="/about">
+
           <Animeapi />
-        </Route> 
-       < Route path="/animenews">
-        
-       <Comicsapi />
+        </Route>
+        < Route path="/characters">
+
+          <Characters />
+        </Route>
+        <Route path="/animenews">
+
+          <Comicsapi />
         </Route>
         <Route path="/upcoming">
-        
+
           < Scheduleapi />
         </Route>
         <Route path="/MyAnimeList">
-      
-        <Studioapi />
-        </Route>    
+
+          <Studioapi />
+        </Route>
         <Route path="/ghibli">
-      
-        <Ghiblicarousel2/>
+
+
+
+          <Ghiblicarousel2 />
           <Ghibliapi />
-          <Ghiblicarousel/>
+          <Ghiblicarousel />
         </Route>
 
         <Route path="/comics/:comicName">
-        <div><ComicDetails/></div>
-      </Route>
+          <div><ComicDetails /></div>
+        </Route>
 
         <Route path="/">
           <Top10 />
           <ComicCarousel />
+
         </Route>
       </Switch>
     </Router>

@@ -84,7 +84,7 @@ function Ghiblicarousel(){
              alt="Tenth slide"
          />
 
-     </Carousel.Item> */}
+     </Carousel.Item> 
  </Carousel>
 </div>)}
 export default Ghiblicarousel;

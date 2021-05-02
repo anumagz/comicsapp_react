@@ -26,7 +26,7 @@ const Comicsapi = () => {
    {
      comicsapi.map(item=>
       <div style={{'backgroundColor': 'black','color':'white'}}>
-        <p>  {item.title}:</p>
+        <p><h5>{item.title}:</h5>  </p>
         <img src=  {item.image_url}/>
   
         {/* {item.image_url} */}

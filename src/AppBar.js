@@ -26,6 +26,10 @@ function AppBar() {
                         <Button>Anime News</Button>
                     </LinkContainer>
 
+                    <LinkContainer to="/characters">
+                        <Button>Characters</Button>
+                    </LinkContainer>
+
                     
                     <LinkContainer to="/upcoming">
                         <Button>Upcoming Anime</Button>

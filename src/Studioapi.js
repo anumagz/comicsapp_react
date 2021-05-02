@@ -31,7 +31,7 @@ for(let i=0;i<genresfromApi.length;i++){
 let csv=""
 for(let j=0;j<genres.length;j++){
     let currentElement = genres[j]
-   csv= currentElement +","+ csv
+   csv= currentElement +"_"+ csv
 }
 return csv
 
@@ -43,10 +43,10 @@ return csv
                 studioapi.map(item =>
                     <div style={{ 'backgroundColor': 'black', 'color': 'white' }}>
                        <p><h4> {item.title}</h4></p>
-                       <p><h4> {extractGenresFromApiResponse( item.genres)}</h4></p>
-                       <p>Episodes: {item.episodes}</p>
+                       <p><h5>Genres: {extractGenresFromApiResponse( item.genres)}</h5></p>
+                       <p><h5>Episodes: {item.episodes}</h5></p>
                        <img src=  {item.image_url} />
-                       <p><h4>Synopsis:</h4>  {item.synopsis}</p>
+                       <p><h5>Synopsis:</h5>  {item.synopsis}</p>
 
                     </div>)
             }

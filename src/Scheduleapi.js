@@ -21,12 +21,32 @@ const Scheduleapi = () => {
     fetchData();
   });
 
+  function extractGenresFromApiResponse(genresfromApi){
+    let genres=[]
+    for(let i=0;i<genresfromApi.length;i++){
+        let currentElement=genresfromApi[i]
+        genres.push(currentElement.name)
+    
+    }
+    let csv=""
+    for(let j=0;j<genres.length;j++){
+        let currentElement = genres[j]
+       csv= currentElement +"_"+ csv
+    }
+    return csv
+    
+     }
+
   return (
     <div>
    {
      scheduleapi.map(item=>
       <div style={{'backgroundColor': 'black','color':'white'}}>
       <h4>{item.title}</h4>  
+      <h5>Genres: {extractGenresFromApiResponse( item.genres)}</h5>
+      <h5>Episodes:{item.episodes}</h5>  
+      <h5>Airing date:{item.airing_start}</h5>  
+    
       <img src={item.image_url}/>
       <p><h5>Synopsis:</h5> {item.synopsis}</p>
   

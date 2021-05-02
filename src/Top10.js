@@ -115,12 +115,12 @@ function Top10() {
 
                     <Container>
                         <LinkContainer to={`/comics/${comic.Title}`}>
-                            <Button>View Details</Button>
+                           <Button>View Details</Button>
                         </LinkContainer>
                         <h2>{comic.Title}</h2>
                         <Row>
 
-                            <Col >
+                            <Col>
                                 <img src={comic.img_url} width="100%" height="100%" />
                             </Col>
                             <Col>

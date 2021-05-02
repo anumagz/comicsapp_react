@@ -25,10 +25,11 @@ const Ghibliapi = () => {
       <div  style={{'backgroundColor': 'black','color':'white'}}>
        
         <h4>{item.title}: </h4>
-      <p>Director:  {item.director}</p>
-       <p>Producer: {item.producer}</p>
-       <p>Release Date: {item.release_date}</p>
-       <p> {item.description}</p>
+      <p><h6>Director:  </h6>{item.director}</p>
+       <p><h6>Producer: </h6>{item.producer}</p>
+       <p><h6>Release Date: </h6>{item.release_date}</p>
+       <p><h6>Description:</h6>{item.description}</p>
+       
       </div>)
    }
    </div>
